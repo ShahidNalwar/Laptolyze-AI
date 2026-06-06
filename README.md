@@ -112,12 +112,23 @@ Add your SerpAPI key to environment variables before running.
 
 ## File Structure
 
+## File Structure
+
+```
 Laptolyze-AI/
-├── app.py              # Main Streamlit app
-├── train_model.py      # BERT fine-tuning script
-├── fetch_reviews.py    # Review scraping
-├── label_encoder.pkl   # Saved label encoder
-├── mlflow.db           # MLflow experiment tracking
-├── requirements.txt
-├── data/               # Training data
-└── pages/              # Multi-page Streamlit pages
+│
+├── app.py                  # Main Streamlit app entry point
+├── train_model.py          # BERT fine-tuning and model training
+├── fetch_reviews.py        # Review scraping from e-commerce platforms
+├── label_encoder.pkl       # Saved label encoder (pos/neg/neutral)
+├── mlflow.db               # MLflow experiment tracking database
+├── requirements.txt        # Python dependencies
+│
+├── data/                   # Training data directory
+│   └── reviews.csv         # Labelled laptop reviews dataset
+│
+└── pages/                  # Multi-page Streamlit pages
+    ├── price_tracker.py    # Live price comparison page
+    ├── sentiment.py        # Sentiment analysis results page
+    └── compare.py          # Laptop comparison page
+```
