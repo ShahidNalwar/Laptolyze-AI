@@ -44,33 +44,33 @@ prices across Amazon, Flipkart, and other platforms in real time.
               │                                 │
               ▼                                 ▼
 ┌─────────────────────────┐       ┌─────────────────────────┐
-│      Price Tracker       │       │     Review Fetcher       │
+│      Price Tracker      │       │     Review Fetcher      │
 │                         │       │                         │
-│  SerpAPI fetches live   │       │  fetch_reviews.py        │
+│  SerpAPI fetches live   │       │  fetch_reviews.py       │
 │  prices from:           │       │  scrapes reviews from   │
-│  • Amazon               │       │  multiple platforms      │
+│  • Amazon               │       │  multiple platforms     │
 │  • Flipkart             │       │                         │
 │  • Other platforms      │       └────────────┬────────────┘
 └────────────┬────────────┘                    │
              │                                 ▼
              │                  ┌─────────────────────────┐
-             │                  │    BERT Classifier       │
+             │                  │    BERT Classifier      │
              │                  │                         │
-             │                  │  train_model.py          │
+             │                  │  train_model.py         │
              │                  │  Fine-tuned on laptop   │
-             │                  │  reviews corpus          │
+             │                  │  reviews corpus         │
              │                  │                         │
              │                  │  Output:                │
-             │                  │  ✅ Positive             │
-             │                  │  ❌ Negative             │
-             │                  │  ➖ Neutral              │
+             │                  │  ✅ Positive            │
+             │                  │  ❌ Negative            │
+             │                  │  ➖ Neutral             │
              └──────────────────┴─────────────┐
                                               │
                                               ▼
                                ┌─────────────────────────┐
-                               │    Streamlit Dashboard   │
+                               │    Streamlit Dashboard  │
                                │                         │
-                               │  • Live price comparison │
+                               │  • Live price comparison│
                                │  • Sentiment breakdown  │
                                │  • Confidence scores    │
                                │  • Buy recommendation   │
